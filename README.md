@@ -20,3 +20,8 @@ All routes are defined under routes package
 - All the Kafka consumers and producers require custom serializer and deserializer. The model includes the deserializer and serilaizer classes.
 
 utils.kafka contains a simple builder class for setting KafkaEndpointUri.
+
+
+There are certain improvements that could be made. For example 
+- Application configuration could be managed using typesafe.config libraries
+- 

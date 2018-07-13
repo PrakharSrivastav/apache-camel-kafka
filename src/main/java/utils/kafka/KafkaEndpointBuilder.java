@@ -19,10 +19,10 @@ public final class KafkaEndpointBuilder implements EndpointBuilder {
     public void setBroker(final String broker) { this.broker = broker; }
     public void setGroupId(final String groupId) { this.groupId = groupId; }
     public void setClientId(final String clientId) { this.clientId = clientId; }
-    public void setSerializerClass(String serializerClass) { this.serializerClass = serializerClass; }
-    public void setAutoCommitEnable(String autoCommitEnable) { this.autoCommitEnable = autoCommitEnable; }
+    public void setSerializerClass(final String serializerClass) { this.serializerClass = serializerClass; }
     public void setAutoOffsetReset(final String autoOffsetReset) { this.autoOffsetReset = autoOffsetReset; }
-    public void setValueDeserializer(String valueDeserializer) { this.valueDeserializer = valueDeserializer; }
+    public void setAutoCommitEnable(final String autoCommitEnable) { this.autoCommitEnable = autoCommitEnable; }
+    public void setValueDeserializer(final String valueDeserializer) { this.valueDeserializer = valueDeserializer; }
 
 
     public String getEndpointUri() {

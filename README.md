@@ -24,4 +24,4 @@ utils.kafka contains a simple builder class for setting KafkaEndpointUri.
 
 There are certain improvements that could be made. For example 
 - Application configuration could be managed using typesafe.config libraries
-- 
+- Better abstraction for building the KafkaEndpoints

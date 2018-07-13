@@ -3,7 +3,7 @@ package beans;
 import model.customer.Customer;
 import model.payment.Payment;
 
-public class PaymentBean {
+public final class PaymentBean {
 
     public Payment map(final Customer customer) {
         if (customer == null) return null;

@@ -1,8 +1,10 @@
+import beans.ManagementBean;
 import org.apache.camel.main.Main;
 import org.apache.camel.main.MainListenerSupport;
 import org.apache.camel.main.MainSupport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import routes.MonitoringRoute;
 import routes.bank.BankProcessPayment;
 import routes.customer.CustomerInvoicePayment;
 import routes.customer.CustomerNotificationProcessor;
@@ -18,7 +20,11 @@ public final class Application {
         main.addMainListener(new Events());
 
 
+        // Add beans
+        main.bind("manageRouteBean", new ManagementBean());
+
         // Add routes
+        main.addRouteBuilder(new MonitoringRoute());
         main.addRouteBuilder(new InvoiceGenerator());
         main.addRouteBuilder(new CustomerInvoicePayment());
         main.addRouteBuilder(new BankProcessPayment());

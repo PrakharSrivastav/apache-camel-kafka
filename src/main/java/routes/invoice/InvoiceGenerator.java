@@ -13,6 +13,8 @@ public class InvoiceGenerator extends RouteBuilder {
 
     @Override
     public void configure() {
+
+
         onException(Exception.class)
                 .log(LoggingLevel.ERROR, logger, exceptionMessage().toString())
                 .log(LoggingLevel.ERROR, logger, "${body}");
